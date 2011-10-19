@@ -1,7 +1,13 @@
 Naturadesign::Application.routes.draw do
-  resources :posts
-
   get "home/index"
+  get "pages/about"
+	get "pages/home"
+  get "pages/contact"
+  get "pages/help"
+
+  resources :microposts
+  resources :users
+  resources :posts
   
   resources :posts do
   	resources :comments
