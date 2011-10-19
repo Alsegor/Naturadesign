@@ -1,10 +1,9 @@
 class PostsController < ApplicationController
 	
-	http_basic_authenticate_with :name => "editor", :password => "pfkegf", :except => :index
-	
   # GET /posts
   # GET /posts.json
   def index
+  	@title = "Posts"
     @posts = Post.all
 
     respond_to do |format|
