@@ -1,25 +1,169 @@
-<h1>Listing posts</h1>
+		<div class="page-title">
+			<div class="page-title-content">
+				<div class="page-title-info left">
+					<h1>Blog / <span>Listing posts</span></h1>
+				</div>
+				<div class="page-title-link">
+					<%= link_to 'New Post', new_post_path %>
+					<%= link_to "Back to Home Page  &raquo;" , root_path if false %>
+				</div>
+				<p class="clr"></p>
+			</div><!--/page-title-content-->
+		</div><!--/page-title-->
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
+<div class="blog_content">
+			
+			
+			<table>
+			  <tr>
+			    <th>Title</th>
+			    <th>Body</th>
+			    <th></th>
+			    <th></th>
+			    <th></th>
+			  </tr>
+			
+			<% @posts.each do |post| %>
+			  <tr>
+			    <td><%= post.title %></td>
+			    <td><%= post.body %></td>
+			    <td><%= link_to 'Show', post %></td>
+			    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+			    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+			  </tr>
+			<% end %>
+			</table>
+			
+			
+			
+			<div class="blog_content_inner blogBackrpt">
+				<%= link_to (image_tag ("blog_img-01.png")), "#"%>
+				<div class="meta_box">
+					<ul>
+						<li>by</li>
+						<li><a href="#">Admin</a></li>
+						<li>, on february 9th, 2011 - </li>
+						<li><a href="#">Advertising,</a></li>
+						<li><a href="#">Video</a></li>
+						<li>|</li>
+						<li><a href="#">2 comments</a></li>
+					</ul>
+				</div><!--/meta_box-->
+				<div class="blog_info">
+					<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnatra aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip exem ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnatra aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
+					<a href="#" class="continue">Continue Reading &mdash;&rsaquo;</a>
+				</div><!--/blog_info-->
+			</div><!--/blog_content_inner-->
+			<div class="blog_content_inner blogBackrpt">
+				<%= link_to (image_tag ("blog_img-02.png")), "#"%>
+				<div class="meta_box">
+					<ul>
+						<li>by</li>
+						<li><a href="#">Admin</a></li>
+						<li>, on february 9th, 2011 - </li>
+						<li><a href="#">Advertising,</a></li>
+						<li><a href="#">Video</a></li>
+						<li>|</li>
+						<li><a href="#">2 comments</a></li>
+					</ul>
+				</div><!--/meta_box-->
+				<div class="blog_info">
+					<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnatra aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip exem ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnatra aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
+					<a href="#" class="continue">Continue Reading &mdash;&rsaquo;</a>
+				</div><!--/blog_info-->
+			</div><!--/blog_content_inner-->
+			<div class="blog_content_inner blogBackrpt">
+				<%= link_to (image_tag ("blog_img-03.png")), "#"%>
+				<div class="meta_box">
+					<ul>
+						<li>by</li>
+						<li><a href="#">Admin</a></li>
+						<li>, on february 9th, 2011 - </li>
+						<li><a href="#">Advertising,</a></li>
+						<li><a href="#">Video</a></li>
+						<li>|</li>
+						<li><a href="#">2 comments</a></li>
+					</ul>
+				</div><!--/meta_box-->
+				<div class="blog_info">
+					<h2><a href="#">Lorem ipsum dolor sit amet</a></h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnatra aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip exem ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnatra aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.  </p>
+					<a href="#" class="continue">Continue Reading &mdash;&rsaquo;</a>
+					<div class="quotation">
+					</div><!--/quotation-->
+				</div><!--/blog_info-->
+			</div><!--/blog_content_inner-->
+			<ul class="pagination">
+				<li><a href="#">&lt;</a></li>
+				<li><a href="#">1</a></li>
+				<li>/</li>
+				<li><a href="#">2</a></li>
+				<li>/</li>
+				<li><a href="#">3</a></li>
+				<li>/</li>
+				<li><a href="#">4</a></li>
+				<li>/</li>
+				<li><a href="#">5</a></li>
+				<li>/</li>
+				<li><a href="#">6</a></li>
+				<li>/</li>
+				<li><a href="#">7</a></li>
+				<li><a href="#">&gt;</a></li>
+			</ul>
+		</div><!--/blog_content-->
+		
+		<div class="sidebar">
+			<div class="topsearch"><input name="" type="text" value="to search type and hit enter" onfocus="if(this.value == 'to search type and hit enter'){this.value = '';}" onblur="if(this.value == ''){this.value='to search type and hit enter';}" /></div><!--/topsearch-->
+			<div class="sidebar_list">
+				<h4>Categories</h4>
+				<ul>
+					<li><a href="#" class="active">Advertising</a></li>
+					<li><a href="#">Architecture</a></li>
+					<li><a href="#">Featured Friday</a></li>
+					<li><a href="#">Photography</a></li>
+					<li><a href="#">Print</a></li>
+					<li><a href="#">Product Design</a></li>
+					<li><a href="#">User interface design</a></li>
+					<li><a href="#">Video</a></li>
+					<li><a href="#">Web</a></li>
+				</ul>
+				<h4>Pages</h4>
+				<ul>
+					<li><a href="#" class="active">About</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<h4>Archives</h4>
+				<ul>
+					<li><a href="#" class="active">February</a></li>
+					<li><a href="#">January</a></li>
+					<li><a href="#">December</a></li>
+				</ul>
+				<h4>Popular Posts</h4>
+				<div class="posts">
+					<a href="#">Lorem ipsum dolor sit ameeet, ipsum it consectetuer adipiscing elitest ...</a>
+					<span>January 22, 2011 - <a href="#" class="active">12 Comments</a></span>
+				</div>
+				<div class="posts">
+					<a href="#">Lorem ipsum dolor sit ameeet, ipsum it consectetuer adipiscing elitest ...</a>
+					<span>January 22, 2011 - <a href="#">12 Comments</a></span>
+				</div>
+				<div class="posts posts01">
+					<a href="#">Lorem ipsum dolor sit ameeet, ipsum it consectetuer adipiscing elitest ...</a>
+					<span>January 22, 2011 - <a href="#">12 Comments</a></span>
+				</div>
+				<h4>Photostream</h4>
+				<ul class="blog_photostream">
+					<li><a href="#"><img src="images/f_icon1.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/f_icon2.png" alt="" /></a></li>
+					<li class="margin_rpt"><a href="#"><img src="images/f_icon3.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/f_icon4.png" alt="" /></a></li>
+					<li><a href="#"><img src="images/f_icon5.png" alt="" /></a></li>
+					<li class="margin_rpt"><a href="#"><img src="images/f_icon6.png" alt="" /></a></li>
+				</ul>
+			</div><!--/sidebar_list-->
+		</div><!--/sidebar-->
+		<div class="clr"></div>
