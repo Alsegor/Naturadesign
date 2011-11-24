@@ -1,11 +1,12 @@
 Naturadesign::Application.routes.draw do
-  get "home/index"
+  get "users/new"
+	get "home/index"
   get "pages/about"
 	get "pages/home"
   get "pages/contact"
   get "pages/help"
   
-  
+  match '/signup',  :to => 'users#new'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
